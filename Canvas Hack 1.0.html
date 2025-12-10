@@ -443,7 +443,7 @@
           function onConfigChange(config) {
             const customFont = config.font_family || defaultConfig.font_family;
             const baseSize = config.font_size || defaultConfig.font_size;
-            document.body.style.fontFamily = ${customFont}, Arial, sans-serif;
+            document.body.style.fontFamily = `${customFont}, Arial, sans-serif`;
             document.body.style.color = config.text_color || defaultConfig.text_color;
 
             const setText = (id, value) => {
@@ -453,7 +453,7 @@
             setText('nav-title', config.hackathon_title || defaultConfig.hackathon_title);
             setText('hero-title', config.hackathon_title || defaultConfig.hackathon_title);
             const heroTitle = document.getElementById('hero-title');
-            if (heroTitle) heroTitle.style.fontSize = ${baseSize * 3.5}px;
+            if (heroTitle) heroTitle.style.fontSize = `${baseSize * 3.5}px`;
             setText('hero-subtitle', config.subtitle || defaultConfig.subtitle);
             setText('theme-text', config.theme_text || defaultConfig.theme_text);
             setText('eligibility-text', config.eligibility_text || defaultConfig.eligibility_text);
